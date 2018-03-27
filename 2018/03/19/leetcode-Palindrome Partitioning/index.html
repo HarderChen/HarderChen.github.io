@@ -103,24 +103,24 @@
   <meta name="keywords" content="Hexo, NexT" />
 
 
-<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637public class 归并算法 &amp;#123;	public static void main(String[] args) &amp;#123;		// TODO Auto-generated method stub		int[]A= &amp;#123;5,3,1,7,2,9,4">
+<meta name="description" content="Question：Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s. For example, given s = “aab”,Return [  [“aa”,”b”],">
 <meta property="og:type" content="article">
-<meta property="og:title" content="归并算法">
-<meta property="og:url" content="http://yoursite.com/2018/02/24/归并算法/index.html">
+<meta property="og:title" content="leetcode--a">
+<meta property="og:url" content="http://yoursite.com/2018/03/19/leetcode-Palindrome Partitioning/index.html">
 <meta property="og:site_name" content="HarderChen&#39;s blog">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637public class 归并算法 &amp;#123;	public static void main(String[] args) &amp;#123;		// TODO Auto-generated method stub		int[]A= &amp;#123;5,3,1,7,2,9,4">
+<meta property="og:description" content="Question：Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s. For example, given s = “aab”,Return [  [“aa”,”b”],">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-24T06:53:45.376Z">
+<meta property="og:updated_time" content="2018-03-19T15:34:27.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="归并算法">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637public class 归并算法 &amp;#123;	public static void main(String[] args) &amp;#123;		// TODO Auto-generated method stub		int[]A= &amp;#123;5,3,1,7,2,9,4">
+<meta name="twitter:title" content="leetcode--a">
+<meta name="twitter:description" content="Question：Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s. For example, given s = “aab”,Return [  [“aa”,”b”],">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/24/归并算法/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/19/leetcode-Palindrome Partitioning/"/>
 
 
 
@@ -129,7 +129,7 @@
     sidebar: "",
   };
 </script>
-  <title>归并算法 | HarderChen's blog</title>
+  <title>leetcode--a | HarderChen's blog</title>
   
 
 
@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/24/归并算法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/19/leetcode-Palindrome Partitioning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chenhang">
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">归并算法</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode--a</h1>
         
 
         <div class="post-meta">
@@ -293,7 +293,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-24T14:47:57+08:00">2018-02-24</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-19T22:03:51+08:00">2018-03-19</time>
             
 
             
@@ -330,8 +330,12 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">public class 归并算法 &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		int[]A= &#123;5,3,1,7,2,9,4&#125;;</span><br><span class="line">		int[]temp=new int[A.length];</span><br><span class="line">		MergeSort(A, temp, 0, A.length-1);</span><br><span class="line">		System.out.println(&quot;result:&quot;);</span><br><span class="line">		for (int i = 0; i &lt; A.length; i++) &#123;</span><br><span class="line">			System.out.println(A[i]+&quot;,&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void MergeSort(int[]A,int[]temp,int left,int right) &#123;</span><br><span class="line">		int mid=(left+right)/2;</span><br><span class="line">		if (right&lt;=left) return;</span><br><span class="line">		MergeSort(A, temp, left, mid);</span><br><span class="line">		MergeSort(A, temp, mid+1, right);</span><br><span class="line">		Merge(A,temp,left,mid,right);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	public static void Merge(int[]A,int[]temp,int left,int mid,int right)&#123;</span><br><span class="line">		</span><br><span class="line">		int i=left,j=mid+1;</span><br><span class="line">		for (int k = left; k&lt;=right;k++) &#123;</span><br><span class="line">			temp[k]=A[k];</span><br><span class="line">		&#125;</span><br><span class="line">		for (int k = left; k &lt;=right; k++) &#123;</span><br><span class="line">			if(i&gt;mid) A[k]=temp[j++];</span><br><span class="line">			else if(j&gt;right) A[k]=temp[i++];</span><br><span class="line">			else if(i&gt;mid) A[k]=temp[j++];</span><br><span class="line">			else if (temp[i]&lt;temp[j])A[k]=temp[i++];</span><br><span class="line">			else A[k]=temp[j++];</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <p>Question：Given a string s, partition s such that every substring of the partition is a palindrome.</p>
+<p>Return all possible palindrome partitioning of s.</p>
+<p>For example, given s = “aab”,<br>Return</p>
+<p>[<br>  [“aa”,”b”],<br>  [“a”,”a”,”b”]<br>]</p>
+<p>Answer：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">	public static List&lt;List&lt;String&gt;&gt;answer;</span><br><span class="line">	public static List&lt;String&gt;tmp;</span><br><span class="line">	public void search(int idx,String s)&#123;</span><br><span class="line">		if(tmp.size()&gt;0&amp;&amp;idx&gt;=s.length())&#123;</span><br><span class="line">            //List&lt;String&gt; r = (ArrayList&lt;String&gt;)tmp.clone();</span><br><span class="line">			answer.add(tmp);</span><br><span class="line">			tmp.clear();</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=idx;i&lt;s.length();i++)&#123;</span><br><span class="line">			if(isPalindrome(idx,i,s))&#123;</span><br><span class="line">				if(idx==i)&#123;</span><br><span class="line">					tmp.add(Character.toString(s.charAt(i)));</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					tmp.add(s.substring(idx,i+1));</span><br><span class="line">				&#125;				</span><br><span class="line">				search(i+1,s);</span><br><span class="line">				tmp.remove(tmp.size()-1);</span><br><span class="line">			</span><br><span class="line">			&#125;</span><br><span class="line">		</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">	public boolean isPalindrome(int l,int r,String s)&#123;</span><br><span class="line">            if(l==r) return true;</span><br><span class="line">			while(l&lt;=r)&#123;</span><br><span class="line">                if(s.charAt(l)!=s.charAt(r))return false;</span><br><span class="line">				l++;</span><br><span class="line">				r--;</span><br><span class="line">			&#125;</span><br><span class="line">			return true;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">    public List&lt;List&lt;String&gt;&gt; partition(String s) &#123;</span><br><span class="line">		answer=new ArrayList&lt;List&lt;String&gt;&gt;();</span><br><span class="line">		tmp=new ArrayList&lt;String&gt;();</span><br><span class="line">        search(0,s);</span><br><span class="line">		return answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class Solution &#123;</span><br><span class="line">        List&lt;List&lt;String&gt;&gt; resultLst;</span><br><span class="line">	    ArrayList&lt;String&gt; currLst;</span><br><span class="line">	    public List&lt;List&lt;String&gt;&gt; partition(String s) &#123;</span><br><span class="line">	        resultLst = new ArrayList&lt;List&lt;String&gt;&gt;();</span><br><span class="line">	        currLst = new ArrayList&lt;String&gt;();</span><br><span class="line">	        backTrack(s,0);</span><br><span class="line">	        return resultLst;</span><br><span class="line">	    &#125;</span><br><span class="line">	    public void backTrack(String s, int l)&#123;</span><br><span class="line">	        if(currLst.size()&gt;0 //the initial str could be palindrome</span><br><span class="line">	            &amp;&amp; l&gt;=s.length())&#123;</span><br><span class="line">	                List&lt;String&gt; r = (ArrayList&lt;String&gt;) currLst.clone();</span><br><span class="line">	                resultLst.add(r);</span><br><span class="line">	        &#125;</span><br><span class="line">	        for(int i=l;i&lt;s.length();i++)&#123;</span><br><span class="line">	            if(isPalindrome(s,l,i))&#123;</span><br><span class="line">	                if(l==i)</span><br><span class="line">	                    currLst.add(Character.toString(s.charAt(i)));</span><br><span class="line">	                else</span><br><span class="line">	                    currLst.add(s.substring(l,i+1));</span><br><span class="line">	                backTrack(s,i+1);</span><br><span class="line">	                currLst.remove(currLst.size()-1);</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	    public boolean isPalindrome(String str, int l, int r)&#123;</span><br><span class="line">	        if(l==r) return true;</span><br><span class="line">	        while(l&lt;r)&#123;</span><br><span class="line">	            if(str.charAt(l)!=str.charAt(r)) return false;</span><br><span class="line">	            l++;r--;</span><br><span class="line">	        &#125;</span><br><span class="line">	        return true;</span><br><span class="line">	    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,8 +362,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/15/线程池学习/" rel="next" title="线程池学习">
-                <i class="fa fa-chevron-left"></i> 线程池学习
+              <a href="/2018/03/19/捋清楚-JVM内部与调优/" rel="next" title="捋清楚--JVM内部与调优">
+                <i class="fa fa-chevron-left"></i> 捋清楚--JVM内部与调优
               </a>
             
           </div>
@@ -368,8 +372,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/26/BFS/" rel="prev" title="BFS">
-                BFS <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/27/二分算法系列/" rel="prev" title="二分算法系列">
+                二分算法系列 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
