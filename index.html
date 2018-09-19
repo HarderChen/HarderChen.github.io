@@ -179,9 +179,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>/*<em>
-  </em>String s,求其回文序列的最大长度<br>  */<br>class Solution {<br>    public String longestPalindrome(String s) {  //babad<br>        if(s == null || s.length() == 0) {<br>            return “”;<br>        }<br>        int start=0;<br>        int end=0;<br>        int maxLen=0;<br>        int len=s.length();<br>        boolean[][]dp=new boolean[len][len];<br>        for(int i=0;i&lt;len;i++){<br>            for(int j=0;j&lt;=i;j++){<br>            if(s.charAt(i)==s.charAt(j)&amp;&amp;((i-j&lt;=2)||dp[i-1][j+1])){<br>                dp[i][j]=true;<br>            }<br>            if(dp[i][j]&amp;&amp;maxLen&lt;i-j+1){<br>                maxLen=i-j+1;<br>                start=j;<br>                end=i;<br>            }<br>        }<br>        return s.substring(start,end+1);<br>    }<br>    public boolean isPalindrome(String s){<br>        if(s==null)return false;<br>        int i=0,j=s.length()-1;<br>        while(i&lt;j){<br>            if(!s.charAt(i)==s.charAt(j))return false;<br>            i++;<br>            j–;<br>        }<br>        return true;<br>    }<br>}</p>
-<p>[2,3,1,2,4,3],n=7 求子数组和大于等于n的最小子数组长度（操作数组还是用多个指针最方便）<br>public int minSubArrayLen(int[]arr,int n){<br>    int sum,idx=0;<br>    int minLen=Integer.MAXVALUE;<br>    for(int i=0;i&lt;arr.length;i++){<br>        sum+=arr[i]<br>        if(sum&gt;=n){<br>            minLen=Math.min(minLen,i-idx+1);<br>            sum-=sum[idx++];<br>        }<br>    }<br>    return (minLen==Integer.MAXVALUE)?0:minLen;<br>}</p>
+        <p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">  *String s,求其回文序列的最大长度</span><br><span class="line">  */</span><br><span class="line">class Solution &#123;</span><br><span class="line">    public String longestPalindrome(String s) &#123;  //babad</span><br><span class="line">        if(s == null || s.length() == 0) &#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">		int start=0;</span><br><span class="line">		int end=0;</span><br><span class="line">		int maxLen=0;</span><br><span class="line">		int len=s.length();</span><br><span class="line">		boolean[][]dp=new boolean[len][len];</span><br><span class="line">		for(int i=0;i&lt;len;i++)&#123;</span><br><span class="line">			for(int j=0;j&lt;=i;j++)&#123;</span><br><span class="line">			if(s.charAt(i)==s.charAt(j)&amp;&amp;((i-j&lt;=2)||dp[i-1][j+1]))&#123;</span><br><span class="line">				dp[i][j]=true;</span><br><span class="line">			&#125;</span><br><span class="line">			if(dp[i][j]&amp;&amp;maxLen&lt;i-j+1)&#123;</span><br><span class="line">				maxLen=i-j+1;</span><br><span class="line">				start=j;</span><br><span class="line">				end=i;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return s.substring(start,end+1);</span><br><span class="line">    &#125;</span><br><span class="line">	public boolean isPalindrome(String s)&#123;</span><br><span class="line">		if(s==null)return false;</span><br><span class="line">		int i=0,j=s.length()-1;</span><br><span class="line">		while(i&lt;j)&#123;</span><br><span class="line">			if(!s.charAt(i)==s.charAt(j))return false;</span><br><span class="line">			i++;</span><br><span class="line">			j--;</span><br><span class="line">		&#125;</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">  *[2,3,1,2,4,3],n=7 求子数组和大于等于n的最小子数组长度（操作数组还是用多个指针最方便）</span><br><span class="line">  */</span><br><span class="line">public int minSubArrayLen(int[]arr,int n)&#123;</span><br><span class="line">	int sum,idx=0;</span><br><span class="line">	int minLen=Integer.MAXVALUE;</span><br><span class="line">	for(int i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">		sum+=arr[i]</span><br><span class="line">		if(sum&gt;=n)&#123;</span><br><span class="line">			minLen=Math.min(minLen,i-idx+1);</span><br><span class="line">			sum-=sum[idx++];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return (minLen==Integer.MAXVALUE)?0:minLen;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>快速排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">	public void quickSort(int[]arr,int l,int h) &#123;</span><br><span class="line">		//assert(arr);</span><br><span class="line">		if(l &gt;= h)//表示已经完成一个组</span><br><span class="line">	    &#123;</span><br><span class="line">	        return;</span><br><span class="line">	    &#125;</span><br><span class="line">		int index=Partition1(arr,l,h);</span><br><span class="line">//		int index=Partition2(arr,l,h);</span><br><span class="line">		quickSort(arr,l,index-1);</span><br><span class="line">		quickSort(arr,index+1,h);</span><br><span class="line">	&#125;</span><br><span class="line">	public int Partition1(int[]arr,int l,int h) &#123;  //挖坑法</span><br><span class="line">		int base=arr[l];</span><br><span class="line">		while(l&lt;h) &#123;</span><br><span class="line">			while(l&lt;h&amp;&amp;arr[h]&gt;=base) &#123;</span><br><span class="line">				h--;</span><br><span class="line">			&#125;</span><br><span class="line">			arr[l]=arr[h];</span><br><span class="line">			while(l&lt;h&amp;&amp;arr[l]&lt;=base) &#123;</span><br><span class="line">				l++;</span><br><span class="line">			&#125;</span><br><span class="line">			arr[h]=arr[l];</span><br><span class="line">							</span><br><span class="line">		&#125;</span><br><span class="line">		arr[h]=base;</span><br><span class="line">		return h;</span><br><span class="line">	&#125;</span><br><span class="line">	public int Partition2(int[]arr,int l,int h) &#123; //直接交换两个不满足的位置</span><br><span class="line">		int base=arr[l];</span><br><span class="line">		while(l&lt;h) &#123;</span><br><span class="line">			while(l&lt;h&amp;&amp;arr[h]&gt;=base) &#123;</span><br><span class="line">				h--;</span><br><span class="line">			&#125;</span><br><span class="line">			while(l&lt;h&amp;&amp;arr[l]&lt;=base) &#123;</span><br><span class="line">				l++;</span><br><span class="line">			&#125;</span><br><span class="line">			swap(arr,l,h);</span><br><span class="line">							</span><br><span class="line">		&#125;</span><br><span class="line">		arr[h]=base;</span><br><span class="line">		return h;</span><br><span class="line">	&#125;</span><br><span class="line">	private static void swap(int[] arr, int l, int h) &#123;</span><br><span class="line">		int temp=arr[l];</span><br><span class="line">		arr[l]=arr[h];</span><br><span class="line">		arr[h]=temp;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选择排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public void selectSort(int[]arr) &#123;</span><br><span class="line">	int len=arr.length;</span><br><span class="line">	int min=0;</span><br><span class="line">	for(int i=0;i&lt;len;i++) &#123;</span><br><span class="line">		for (int j = i+1; j &lt; len; j++) &#123;</span><br><span class="line">			min=i;</span><br><span class="line">			if(arr[j]&lt;arr[i]) &#123;</span><br><span class="line">				min=j;;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		swap(arr, i, min);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>5.冒泡排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public void bubbleSort(int[]arr) &#123;</span><br><span class="line">	int len=arr.length;</span><br><span class="line">	Boolean hasSorted=false;</span><br><span class="line">	for (int i = 0; i &lt; len&amp;&amp;!hasSorted; i++) &#123;</span><br><span class="line">		hasSorted=true;</span><br><span class="line">		for (int j = 0; j &lt; len-i-1; j++) &#123;</span><br><span class="line">			if(arr[j+1]&gt;arr[j]) &#123;</span><br><span class="line">				hasSorted=false;</span><br><span class="line">				swap(arr, j, j+1);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>6.插入排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public void insertSort(int[]arr) &#123;</span><br><span class="line">	int len=arr.length;</span><br><span class="line">	for (int i = 1; i &lt; len; i++) &#123;</span><br><span class="line">		for (int j = i; j&gt;0&amp;&amp;arr[j]&lt;arr[j-1]; j--) &#123;</span><br><span class="line">			swap(arr, j, j-1);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -195,69 +205,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/18/算法系列/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-article-title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/18/article-title/">article title</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/18/article-title/" class="archive-article-date">
-  	<time datetime="2018-09-18T10:48:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>四川省地产 暗搓搓撒 啊撒啊</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/18/article-title/">展开全文 >></a>
         </p>
       
 
