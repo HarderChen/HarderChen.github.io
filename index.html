@@ -158,9 +158,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>HDFS</strong></p>
-<ul>
-<li>==Data Replication==：<ul>
+        <ul>
+<li>Data Replication：<ul>
 <li>The block size and replication factor are configurable per file.  </li>
 <li>The replication factor can be specified at file creation time and can be changed later.</li>
 <li>Files in HDFS are write-once (except for appends and truncates) and have strictly one writer at any time.</li>
@@ -170,15 +169,16 @@
 <li>Safemode:</li>
 </ul>
 </li>
-<li>==The Persistence of File System Metadata：==<ul>
+<li>The Persistence of File System Metadata：<ul>
 <li>checkpoint,FsImage,EditLog,Memory</li>
-<li>DataNode It stores each block of HDFS data in a separate file in its local file system.DataNode does not create all files in the same directory.<br> it uses a heuristic to determine the optimal number of files per directory and creates subdirectories appropriately.<br>When a DataNode starts up, it scans through its local file system, generates a list of all HDFS data blocks that correspond to each of these local files, and sends this report to the NameNode. The report is called the Blockreport.<br>-== The Communication Protocols==<ul>
+<li>DataNode It stores each block of HDFS data in a separate file in its local file system.DataNode does not create all files in the same directory.<br> it uses a heuristic to determine the optimal number of files per directory and creates subdirectories appropriately.<br>When a DataNode starts up, it scans through its local file system, generates a list of all HDFS data blocks that correspond to each of these local files, and sends this report to the NameNode. The report is called the Blockreport.</li>
+</ul>
+</li>
+<li>The Communication Protocols<ul>
 <li>All HDFS communication protocols are layered on top of the TCP/IP protocol.<br>ClientProtocol,DataNodeProtocol,RPC</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>==Robustness==<ul>
+<li>Robustness<ul>
 <li>three failures:NameNode Failures,DataNode Failures,Network Partitions</li>
 <li>Cluster Rebalancing</li>
 <li>Data Integrity: checksum</li>
@@ -186,18 +186,18 @@
 <li>Snapshots</li>
 </ul>
 </li>
-<li>==Data Organization==<ul>
+<li>Data Organization<ul>
 <li>Data Blocks</li>
 <li>Replication Pipelining</li>
 </ul>
 </li>
-<li>==Accessibility==<ul>
+<li>Accessibility<ul>
 <li>FS Shell</li>
 <li>DFSAdmin</li>
 <li>Browser Interface</li>
 </ul>
 </li>
-<li>==Space Reclamation==<ul>
+<li>Space Reclamation<ul>
 <li>File Deletes and Undeletes</li>
 <li>Decrease Replication Factor</li>
 </ul>
