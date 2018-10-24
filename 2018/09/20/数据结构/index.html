@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 
-  <html class="light page-file">
+  <html class="light page-aticle">
 
 
 <head>
   <meta charset="utf-8">
   
-  <title>LeetCode | HarderChen&#39;s blog</title>
+  <title>Data Structure | HarderChen&#39;s blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,17 +15,14 @@
     <meta name="keywords" content="" />
   
 
-  <meta name="description" content="T69:Implement int sqrt(int x).Compute and return the square root of x.x is guaranteed to be a non-negative integer.public class Solution{ public int Sqrt(int x){      int low=1,high=x;      while(low&amp;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode">
-<meta property="og:url" content="http://yoursite.com/2018/02/11/LeetCode/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Data Structure">
+<meta property="og:url" content="http://yoursite.com/2018/09/20/数据结构/index.html">
 <meta property="og:site_name" content="HarderChen&#39;s blog">
-<meta property="og:description" content="T69:Implement int sqrt(int x).Compute and return the square root of x.x is guaranteed to be a non-negative integer.public class Solution{ public int Sqrt(int x){      int low=1,high=x;      while(low&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-11T15:08:11.496Z">
+<meta property="og:updated_time" content="2018-09-19T16:19:06.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode">
-<meta name="twitter:description" content="T69:Implement int sqrt(int x).Compute and return the square root of x.x is guaranteed to be a non-negative integer.public class Solution{ public int Sqrt(int x){      int low=1,high=x;      while(low&amp;">
+<meta name="twitter:title" content="Data Structure">
 
   
 
@@ -183,14 +180,14 @@
 
 
 <div class="content content-post CENTER">
-   <article id="file-LeetCode" class="article article-type-file" itemprop="blogPost">
+   <article id="aticle-数据结构" class="article article-type-aticle" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">LeetCode</h1>
+    <h1 class="post-title">Data Structure</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2018.02.11</span>
+        <span>2018.09.20</span>
       </span>
 
       
@@ -218,29 +215,7 @@
 
   <div class="article-content">
     
-      <p>T69:<br>Implement int sqrt(int x).<br>Compute and return the square root of x.<br>x is guaranteed to be a non-negative integer.<br>public class Solution{</p>
-<pre><code>public int Sqrt(int x){
-
-    int low=1,high=x;
-
-    while(low&lt;=high){
-       long mid=(high-low)/2+low;
-        if(mid*mid==x){
-            return (int)mid;
-        }else if(mid*mid&lt;x){
-            high=(int)mid-1;
-        }else{
-            low=(int)mid+1;
-        }
-    }
-    if (high * high &lt; x) {
-        return (int) high;
-    } else {
-        return (int) low;
-    }
-} 
-</code></pre><p>}</p>
-
+      
     
   </div>
 
@@ -277,10 +252,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="hide pull-left" href="/">
+    <a class="show pull-left" href="/2018/09/20/AVL-Rotation/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2018/02/15/基于机器学习的文档内容与识别系统-分类模块/">
+    <a class="show pull-right" href="/2018/09/25/HDFS/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -398,7 +373,7 @@
 
 
   
-      <div class="fexo-comments comments-file">
+      <div class="fexo-comments comments-aticle">
     
   <section class="disqus-comments">
     <div id="disqus_thread">
@@ -409,7 +384,7 @@
   <script>
     var disqus_shortname = 'rover';
     
-    var disqus_url = 'http://yoursite.com/2018/02/11/LeetCode/';
+    var disqus_url = 'http://yoursite.com/2018/09/20/数据结构/';
     
     (function(){
       var dsq = document.createElement('script');
